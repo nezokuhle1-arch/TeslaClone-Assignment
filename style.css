@@ -9,3 +9,22 @@
     font-weight: 500;
 }
 
+h1 {
+    font-size: 28px;
+    font-family: 500;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 500;
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 20px;
+    font-family: 400;
+    padding: 6px 24px 16px 24px;
+    color: #FFFFFF;
+}
+
