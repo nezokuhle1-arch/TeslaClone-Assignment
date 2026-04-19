@@ -59,22 +59,57 @@ a {
     padding: 4px 16px;
 }
 
-h1 {
-    font-size: 28px;
-    font-family: 500;
-    color: #FFFFFF;
+/* Hero Section Styles*/
+
+.hero-section {
+    position: relative;
+    height: 100vh;
 }
 
-h2 {
-    font-size: 40px;
-    font-family: 500;
-    color: #FFFFFF;
+/*these styles are for the slides in the hero section, you can customize them as needed, hide by default*/
+.slide {
+    display: none;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
 }
 
-p {
-    font-size: 20px;
-    font-family: 400;
-    padding: 6px 24px 16px 24px;
+.slide:first-of-type,
+.slide:target {
+    display: flex; /* Show the first slide by default */
+}
+
+/*Individual slide backgrounds*/
+#slide-1 {
+    background-image: url(./assets/Full\ Self\ Driving\ vid.mp4);
+    background-size: cover;
+    background-position: cover;
+}
+
+#slide- {
+    background-image: url(./assets/sergey-sokolov-mw8A4dOX9z8-unsplash.jpg);
+    background-size: cover;
+    background-position: cover;
+}
+
+#slide-3 {
+    background-image: url(./assets/Model\ Y\ \(Slide\ 1\).jpg);
+    background-size: cover;
+    background-position: cover;
+}
+
+.slide h1 {
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 18px;
+    margin-bottom: 30px;
     color: #FFFFFF;
 }
 
