@@ -10,6 +10,11 @@
     font-weight: 500;
 }
 
+body {
+    background-color: #fff;
+    color: #000;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -75,7 +80,7 @@ a {
     background-position: center;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -86,30 +91,67 @@ a {
 
 /*Individual slide backgrounds*/
 #slide-1 {
-    background-image: url(./assets/Full\ Self\ Driving\ vid.mp4);
+    background-image: url(./assets/sentry-labs-K1xnHnEFB5Y-unsplash.jpg);
     background-size: cover;
     background-position: cover;
 }
 
-#slide- {
+#slide-2 {
     background-image: url(./assets/sergey-sokolov-mw8A4dOX9z8-unsplash.jpg);
     background-size: cover;
     background-position: cover;
 }
 
 #slide-3 {
-    background-image: url(./assets/Model\ Y\ \(Slide\ 1\).jpg);
+    background-image: url(./assets/Model\ Y\ \(slide\ sec\).jpg);
     background-size: cover;
     background-position: cover;
 }
 
 .slide h1 {
     margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
 }
 
 .slide p {
     font-size: 18px;
-    margin-bottom: 30px;
-    color: #FFFFFF;
+    margin-top: calc(164px - 56px);
+    color: rgba(38, 18, 167, 0.8);
+}
+
+/*buttons area*/
+.actions-area {
+    display: flex;
+    gap: 16px;
+    justify-content: center;    
+    margin-bottom: 100px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 164px;
+    height: 40px;
+    padding: 4px 4px 4px 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.dark-btn {
+    background-color: #3B82F6;
+    color: #ffffff;
+}
+
+.light-btn {
+    background-color: #ffffff;
+    color: #393c41;
 }
 
