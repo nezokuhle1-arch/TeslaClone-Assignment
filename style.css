@@ -75,7 +75,7 @@ a {
 .slide {
     display: none;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 56px);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -110,21 +110,20 @@ a {
 
 .slide h1 {
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 500;
     color: #ffffff;
 }
 
 .slide p {
-    font-size: 18px;
-    margin-top: calc(164px - 56px);
-    color: rgba(38, 18, 167, 0.8);
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.995);
 }
 
 /*buttons area*/
 .actions-area {
     display: flex;
-    gap: 16px;
     justify-content: center;    
     margin-bottom: 100px;
 }
@@ -161,4 +160,53 @@ button {
 
 .light-btn:hover {
     background-color: #dbdbdb;
+}
+
+/*arrows for the hero section*/
+.arrow-left, .arrow-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    color: #111;
+    background-color: rgba(255, 255, 255, 0.85);
+    justify-content: center;
+    text-decoration: none;
+} 
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #fff;
+}
+
+.dot-navigation {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dot:hover {
+    background-color: #fff;
 }
