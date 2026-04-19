@@ -25,7 +25,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
 }
 
 .navbar {
@@ -91,7 +91,7 @@ a {
 
 /*Individual slide backgrounds*/
 #slide-1 {
-    background-image: url(./assets/sentry-labs-K1xnHnEFB5Y-unsplash.jpg);
+    background-image: url(./assets/FSD.jpg);
     background-size: cover;
     background-position: cover;
 }
@@ -155,3 +155,10 @@ button {
     color: #393c41;
 }
 
+.dark-btn:hover {
+    background-color: #2563eb;
+}
+
+.light-btn:hover {
+    background-color: #dbdbdb;
+}
