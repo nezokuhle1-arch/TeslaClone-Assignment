@@ -1,4 +1,4 @@
-# Electric-Visions 🚗⚡
+# Electric-Visions 
 
 A Tesla-inspired electric vehicle landing page built with HTML and CSS.
 
