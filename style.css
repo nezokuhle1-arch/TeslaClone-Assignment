@@ -318,9 +318,9 @@ button {
 
 /* Individual card backgrounds */
 #model-1 { background-image: url('./assets/Model\ 3\ \(model\ section\).jpg'); }
-#model-2 { background-image: url('./assets/Model\ Y\ \(model\ sec\).jpg'); }
+#model-2 { background-image: url('./assets/Model\ X.jpg'); }
 #model-3 { background-image: url('./assets/Model\ S.jpg'); }
-#model-4 { background-image: url('./assets/Model\ X.jpg'); }
+#model-4 { background-image: url('./assets/Model\ Y\ \(model\ sec\).jpg'); }
 
 /* Dots */
 .dots-container {
