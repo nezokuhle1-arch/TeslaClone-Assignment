@@ -20,6 +20,10 @@ a {
     color: inherit;
 }
 
+.main {
+    overflow: hidden;
+}
+
 .navbar-container {
     position: fixed;
     top: 0;
@@ -69,6 +73,7 @@ a {
 .hero-section {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 /*these styles are for the slides in the hero section, you can customize them as needed, hide by default*/
@@ -213,3 +218,141 @@ button {
 .dot:hover {
     background-color: #fff;
 }
+
+.content-section {
+    position: relative;
+    background: #ffffff;
+    padding: 40px 0 30px;
+    overflow: hidden; 
+    position: relative;
+}
+
+/* The track holds all cards in a horizontal row*/
+.models-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 40px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.models-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.model-card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 580px;
+    width: calc(50% - 28px);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px 30px;
+    color: #fff;
+}
+
+.model-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%);
+    border-radius: 12px;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Keeps text above the overlay */
+.model-card h2,
+.model-card p,
+.model-card .model-tag,
+.model-card .actions-area {
+    position: relative;
+    z-index: 1;
+}
+
+/* Small label at top like "Sport Sedan" */
+.model-tag {
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
+
+.model-card h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.model-card p {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.9);
+    text-decoration: underline;
+}
+
+/* Individual card backgrounds */
+#model-1 { background-image: url('./assets/Model\ 3\ \(model\ section\).jpg'); }
+#model-2 { background-image: url('./assets/Model\ Y\ \(model\ sec\).jpg'); }
+#model-3 { background-image: url('./assets/Model\ S.jpg'); }
+#model-4 { background-image: url('./assets/Model\ X.jpg'); }
+
+/* Dots */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 0 40px;
+}
+
+.dots-container .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.25);
+    display: block;
+    transition: background 0.2s;
+}
+
+.dots-container .dot:hover {
+    background: #000;
+}
+
+.section-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    color: #111;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.section-arrow-left  { left: 8px; }
+.section-arrow-right { right: 8px; }
+
+.section-arrow:hover { background: #fff; }
