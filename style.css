@@ -84,7 +84,10 @@ a {
     text-align: center;
 }
 
-.slide:first-of-type,
+.hero-section .slide:first-child {
+    display: flex; /* Show the first slide by default */
+}
+
 .slide:target {
     display: flex; /* Show the first slide by default */
 }
