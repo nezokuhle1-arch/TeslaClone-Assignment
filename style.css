@@ -101,19 +101,19 @@ a {
 #slide-1 {
     background-image: url(./assets/FSD.jpg);
     background-size: cover;
-    background-position: cover;
+    background-position: center;
 }
 
 #slide-2 {
     background-image: url(./assets/sergey-sokolov-mw8A4dOX9z8-unsplash.jpg);
     background-size: cover;
-    background-position: cover;
+    background-position: center;
 }
 
 #slide-3 {
     background-image: url(./assets/Model\ Y\ \(slide\ sec\).jpg);
     background-size: cover;
-    background-position: cover;
+    background-position: center;
 }
 
 .slide h1 {
@@ -232,7 +232,7 @@ button {
     display: flex;
     gap: 16px;
     overflow-x: scroll;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 0 40px;
     scrollbar-width: none; /* Firefox */
@@ -386,4 +386,67 @@ footer {
 
 .footer-item a:hover {
     color: #000000;
+}
+
+/* Responsive adjustments for mobile */
+
+/* Media query — only applies when screen is 768px wide or less */
+@media (max-width: 768px) {
+    /* Hide middle nav on mobile — not enough space */
+    .middle-menu {
+        display: none;
+    }
+
+    /* Right menu also simplified */
+    .right-menu {
+        gap: 8px;
+    }
+
+    .nav-item {
+        padding: 4px 8px;
+    }
+
+    /* Hero text scales down */
+    .slide h1 {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+
+    .slide p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    /* Buttons stack vertically on mobile */
+    .actions-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Model cards go full width on mobile — one at a time */
+    .model-card {
+        width: calc(100% - 80px);   /* one card visible instead of two */
+        height: 460px;
+    }
+
+    .model-card h2 {
+        font-size: 32px;
+    }
+
+    /* Model card buttons stack on mobile */
+    .model-actions-area {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .model-card .dark-btn,
+    .model-card .light-btn {
+        width: 100%;
+    }
+
+    /* Footer links wrap nicely */
+    .footer-nav {
+        gap: 8px 16px;
+    }
 }
