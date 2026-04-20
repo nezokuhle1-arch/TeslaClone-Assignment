@@ -158,8 +158,8 @@ button {
 }
 
 .light-btn {
-    background-color: #ffffff;
-    color: #393c41;
+    background-color: rgba(255, 255, 255, 0.948);
+    color: #171a1e;
 }
 
 .dark-btn:hover {
@@ -273,6 +273,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: relative;
+    z-index: 2; 
 }
 
 /* Keeps text above the overlay */
@@ -284,13 +286,20 @@ button {
     z-index: 1;
 }
 
+.model-actions-area {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;        /* ← lifts buttons above the ::before overlay */
+}
 /* Small label at top like "Sport Sedan" */
 .model-tag {
     font-size: 17px;
     font-weight: 500;
     position: relative;
     color: #fff;
-    z-index: 1;
+    z-index: 2;
 }
 
 .model-card h2 {
@@ -356,3 +365,25 @@ button {
 .section-arrow-right { right: 8px; }
 
 .section-arrow:hover { background: #fff; }
+
+footer {
+    background: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+}
+
+.footer-item a {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.558);
+}
+
+.footer-item a:hover {
+    color: #000000;
+}
