@@ -68,6 +68,51 @@ a {
     padding: 4px 16px;
 }
 
+.nav-item:hover {
+    background-color: #d8d9da;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+.nav-icon-item {
+    position: relative;      /* needed for tooltip positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 18px;         /* controls icon size */
+}
+
+/* The tooltip text — hidden by default */
+.icon-tooltip {
+    position: absolute;
+    top: 40px;               /* sits below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;     /* prevents text wrapping */
+    opacity: 0;              /* invisible by default */
+    pointer-events: none;    /* can't accidentally hover the tooltip itself */
+    transition: opacity 0.2s ease;
+}
+
+/* Show tooltip on hover */
+.nav-icon-item:hover .icon-tooltip {
+    opacity: 1;
+}
+
+/* Optional — subtle hover background like Tesla */
+.nav-icon-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
 /* Hero Section Styles*/
 
 .hero-section {
